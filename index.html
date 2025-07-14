@@ -5,6 +5,18 @@
   <title>Multimodal Speech Synthesis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    audio, video {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body style="font-family: sans-serif; background-color: #f9f9f9;">
@@ -21,7 +33,7 @@
       <ul>
         <li><a href="#text-to-speech">Text-to-Speech</a></li>
         <li><a href="#lip-to-speech">Lip-to-Speech</a></li>
-        <li><a href="#murmur-to-speech">Non-Audible Murmur to Speech</a></li>
+        <li><a href="#non-audible-murmur-to-speech">Non-Audible Murmur to Speech</a></li>
         <li><a href="#ultrasound-to-speech">Ultrasound to Speech</a></li>
         <li><a href="#whisper-to-speech">Whisper to Speech</a></li>
       </ul>
@@ -33,11 +45,10 @@
       <p>The multi-modal TTS module converts textual input into speech.</p>
 
       <div class="row">
-        <!-- Repeat this block for each sample -->
         <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-body">
-              <p><strong>Language:</strong> Hindi<br>
+              <p><strong>Language:</strong> Hindi</p>
               <p><strong>Sample:</strong> "शिष्य सदा गुरु के पदचिह्नों पर चलता है, लेकिन उसका उद्देश्य केवल ज्ञान प्राप्त करना ही होता है।"</p>
               <audio controls>
                 <source src="resources/tts/Hindi_1.wav" type="audio/wav">
@@ -49,7 +60,7 @@
         <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-body">
-              <p><strong>Language:</strong> Hindi<br>
+              <p><strong>Language:</strong> Hindi</p>
               <p><strong>Sample:</strong> "पाँचवीं पंचवर्षीय योजना में इसके कार्यक्षेत्र को और विस्तृत किया गया|"</p>
               <audio controls>
                 <source src="resources/tts/Hindi_2.wav" type="audio/wav">
@@ -61,7 +72,7 @@
         <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-body">
-              <p><strong>Language:</strong> Marathi<br>
+              <p><strong>Language:</strong> Marathi</p>
               <p><strong>Sample:</strong> "मेजर ध्यानचंद हे भारतीय हॉकीचे खेळाडू आणि संघनायक होते."</p>
               <audio controls>
                 <source src="resources/tts/Marathi_1.wav" type="audio/wav">
@@ -73,7 +84,7 @@
         <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-body">
-              <p><strong>Language:</strong> Marathi<br>
+              <p><strong>Language:</strong> Marathi</p>
               <p><strong>Sample:</strong> "भालचंद्र नेमाडे यांची हिंदू ही कादंबरी अपेक्षेपेक्षा फारच कमी खपली. हिंदूच्या एकूण चार कादंबऱ्यांची मालिका निघणार."</p>
               <audio controls>
                 <source src="resources/tts/Marathi_2.wav" type="audio/wav">
@@ -85,7 +96,7 @@
         <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-body">
-              <p><strong>Language:</strong> Kannada<br>
+              <p><strong>Language:</strong> Kannada</p>
               <p><strong>Sample:</strong> "ಆಂಗ್ಲ ಸೈನಿಕರಿಗಿದ್ದ ಸ್ಥಾನಮಾನ, ವೇತನ, ಬಡ್ತಿ ಅವಕಾಶಗಳು ಭಾರತೀಯ ಸಿಪಾಯಿಗಳಿಗೆ ಇರಲಿಲ್ಲ"</p>
               <audio controls>
                 <source src="resources/tts/kannada.wav" type="audio/wav">
@@ -97,7 +108,7 @@
         <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-body">
-              <p><strong>Language:</strong> Bhojpuri<br>
+              <p><strong>Language:</strong> Bhojpuri</p>
               <p><strong>Sample:</strong> "अपराध बिज्ञान ब्यवहार आउर सामाजिक दुनों बिज्ञान में एगो अंतर्विषय क्षेत्र हवे"</p>
               <audio controls>
                 <source src="resources/tts/Bhojpuri1.wav" type="audio/wav">
@@ -109,68 +120,177 @@
       </div>
     </section>
 
-    <!-- Repeat sections for Lip, Murmur, etc. with same structure -->
-     <!-- Section: Lip-to-Speech -->
+    <!-- Section: Lip-to-Speech -->
     <section id="lip-to-speech" class="mb-5">
-    <h3>Lip-to-Speech</h3>
-    <p>This module converts silent lip movements into audible speech using visual speech synthesis techniques.</p>
+      <h3>Lip-to-Speech</h3>
+      <p>This module converts silent lip movements into audible speech using visual speech synthesis techniques.</p>
 
-    <div class="row">
-        <!-- Sample Card -->
+      <div class="row">
         <div class="col-md-6 mb-4">
-        <div class="card h-100">
+          <div class="card h-100">
             <div class="card-body">
-            <h5 class="card-title">Sample 1</h5>
-            <p><strong>Ground Truth Video:</strong></p>
-            <video controls style="max-width: 100%; height: 200px;">
+              <h5 class="card-title">Sample 1</h5>
+              <p><strong>Ground Truth Video:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
                 <source src="resources/L2S/gt1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+              </video>
 
-            <p class="mt-3"><strong>Input to Model:</strong></p>
-            <video controls style="max-width: 100%; height: 200px;">
+              <p class="mt-3"><strong>Input to Model:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
                 <source src="resources/L2S/input1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+              </video>
 
-            <p class="mt-3"><strong>Generated Speech Output:</strong></p>
-            <video controls style="max-width: 100%; height: 200px;">
+              <p class="mt-3"><strong>Generated Speech Output:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
                 <source src="resources/L2S/output1.mp4" type="video/mp4">
-                Your browser does not support the audio element.
-            </video>
+                Your browser does not support the video tag.
+              </video>
             </div>
-        </div>
+          </div>
         </div>
 
         <div class="col-md-6 mb-4">
-        <div class="card h-100">
+          <div class="card h-100">
             <div class="card-body">
-            <h5 class="card-title">Sample 2</h5>
-            <p><strong>Ground Truth Video:</strong></p>
-            <video controls style="max-width: 100%; height: 200px;">
+              <h5 class="card-title">Sample 2</h5>
+              <p><strong>Ground Truth Video:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
                 <source src="resources/L2S/gt2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+              </video>
 
-            <p class="mt-3"><strong>Input to Model:</strong></p>
-            <video controls style="max-width: 100%; height: 200px;">
+              <p class="mt-3"><strong>Input to Model:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
                 <source src="resources/L2S/input2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+              </video>
 
-            <p class="mt-3"><strong>Generated Speech Output:</strong></p>
-            <video controls style="max-width: 100%; height: 200px;">
+              <p class="mt-3"><strong>Generated Speech Output:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
                 <source src="resources/L2S/output2.mp4" type="video/mp4">
-                Your browser does not support the audio element.
-            </video>
+                Your browser does not support the video tag.
+              </video>
             </div>
+          </div>
         </div>
-        </div>
-
-        <!-- Duplicate above block for more samples -->
-    </div>
+      </div>
     </section>
 
+    <!-- Section: NAM-to-Speech -->
+    <section id="non-audible-murmur-to-speech" class="mb-5">
+      <h3>Non-Audible Murmur to Speech</h3>
+      <p>This module converts non-audible murmur signals into intelligible speech using advanced synthesis models.</p>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">NAM Input and Synthesized Speech Output</h5>
+              <p><strong>Sample:</strong> "The crow said that the camel was a domestic animal fit to be killed and eaten."</p>
+              <p><strong>Input NAM:</strong></p>
+              <audio controls>
+                <source src="resources/n2s/nam1.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              <p class="mt-2"><strong>Synthesized Speech:</strong></p>
+              <audio controls>
+                <source src="resources/n2s/output1.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">NAM Input and Synthesized Speech Output</h5>
+              <p><strong>Sample:</strong> "He was eager to show his mother, how brave he was."</p>
+              <p><strong>Input NAM:</strong></p>
+              <audio controls>
+                <source src="resources/n2s/nam2.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              <p class="mt-2"><strong>Synthesized Speech:</strong></p>
+              <audio controls>
+                <source src="resources/n2s/output2.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Section: Ultrasound-to-Speech -->
+    <section id="ultrasound-to-speech" class="mb-5">
+      <h3>Ultrasound to Speech</h3>
+      <p>This module synthesizes speech from ultrasound tongue imaging, capturing articulatory motion during silent or whispered speaking.</p>
+
+      <div class="row">
+        <!-- Sample 1 -->
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Ultrasound-to-Speech Sample 1</h5>
+              
+              <p><strong>Ground-Truth Speech:</strong></p>
+              <audio controls>
+                <source src="resources/u2s/sample1gt.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="mt-3"><strong>Input Ultrasound Video:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
+                <source src="resources/u2s/sample1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <p class="mt-3"><strong>Predicted Speech Output:</strong></p>
+              <audio controls>
+                <source src="resources/u2s/sample1audio.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 2 (Optional) -->
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Ultrasound-to-Speech Sample 2</h5>
+              
+              <p><strong>Ground-Truth Speech:</strong></p>
+              <audio controls>
+                <source src="resources/u2s/sample2gt.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="mt-3"><strong>Input Ultrasound Video:</strong></p>
+              <video controls style="max-width: 100%; height: 200px;">
+                <source src="resources/u2s/sample2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <p class="mt-3"><strong>Predicted Speech Output:</strong></p>
+              <audio controls>
+                <source src="resources/u2s/sample2audio.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Optional Footer -->
+    <footer class="text-center mt-5">
+      <p class="text-muted">© 2025 IIIT Hyderabad – Multimodal Speech Synthesis Project</p>
+    </footer>
 
   </div>
 </body>
